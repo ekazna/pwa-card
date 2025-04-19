@@ -12,11 +12,29 @@ const urlsToCache = [
   '/icons/qr-vk.png',
 ];
 
-self.addEventListener("install", e => {
-  e.waitUntil(
-    caches.open(CACHE_NAME).then(c => c.addAll(urlsToCache))
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => {
+        console.log('Opened cache');
+        // Кэшируем файлы по одному с обработкой ошибок
+        return Promise.all(
+          urlsToCache.map(url => {
+            return fetch(url)
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error(`Failed to fetch ${url}: ${response.status}`);
+                }
+                return cache.put(url, response);
+              })
+              .catch(err => {
+                console.error(`Failed to cache ${url}:`, err);
+              });
+          })
+        );
+      })
+      .then(() => self.skipWaiting())
   );
-  self.skipWaiting(); // Сразу активировать новый воркер
 });
 
 

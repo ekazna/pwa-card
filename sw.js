@@ -1,15 +1,15 @@
 const CACHE_NAME = 'visit-card-cache-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/app.js',
-  '/images/image.jpg',
-  '/icons/512.png',
-  '/icons/192.png',
-  '/icons/qr-phone.png',
-  '/icons/qr-tg.png',
-  '/icons/qr-vk.png',
+  '/pwa-card/',
+  '/pwa-card/index.html',
+  '/pwa-card/styles.css',
+  '/pwa-card/app.js',
+  '/pwa-card/images/image.jpg',
+  '/pwa-card/icons/512.png',
+  '/pwa-card/icons/192.png',
+  '/pwa-card/icons/qr-phone.png',
+  '/pwa-card/icons/qr-tg.png',
+  '/pwa-card/icons/qr-vk.png',
 ];
 
 self.addEventListener('install', event => {

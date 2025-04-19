@@ -12,15 +12,13 @@ const urlsToCache = [
   '/icons/qr-vk.png',
 ];
 
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
+self.addEventListener("install", e => {
+  e.waitUntil(
+    caches.open(CACHE_NAME).then(c => c.addAll(FILES))
   );
+  self.skipWaiting(); // Сразу активировать новый воркер
 });
+
 
 self.addEventListener("activate", e => {
   e.waitUntil(

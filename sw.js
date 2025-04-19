@@ -17,7 +17,6 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME)
       .then(cache => {
         console.log('Opened cache');
-        // Кэшируем файлы по одному с обработкой ошибок
         return Promise.all(
           urlsToCache.map(url => {
             return fetch(url)

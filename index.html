@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя визитка</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/192.png">
+    <meta name="theme-color" content="#567568">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/image.jpg" alt="Мое фото" class="profile-photo">
+            <h1>Знаменская Екатерина</h1>
+        </header>
+
+        <section class="contacts">
+            <h2>Мои контакты</h2>
+
+            <div class="contact-item">
+                <a href="tel:+79123456789" class="contact-button">
+                    <span>Телефон</span>
+                </a>
+                <div class="qr-code">
+                    <img src="http://qrcoder.ru/code/?%2B79161234567&4&0" alt="QR код телефона">
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <a href="https://t.me/s/yandex" target="_blank" class="contact-button">
+                    <span>Telegram</span>
+                </a>
+                <div class="qr-code">
+                    <img src="http://qrcoder.ru/code/?https%3A%2F%2Ft.me%2Fs%2Fyandex&4&0" alt="QR код Telegram">
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <a href="https://vk.com/durov" target="_blank" class="contact-button">
+                    <span>VK</span>
+                </a>
+                <div class="qr-code">
+                    <img src="http://qrcoder.ru/code/?https%3A%2F%2Fvk.com%2Fdurov&4&0" alt="QR код VK">
+                </div>
+            </div>
+
+            
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

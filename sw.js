@@ -14,7 +14,7 @@ const urlsToCache = [
 
 self.addEventListener("install", e => {
   e.waitUntil(
-    caches.open(CACHE_NAME).then(c => c.addAll(FILES))
+    caches.open(CACHE_NAME).then(c => c.addAll(urlsToCache))
   );
   self.skipWaiting(); // Сразу активировать новый воркер
 });

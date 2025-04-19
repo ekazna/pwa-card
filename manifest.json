@@ -1,11 +1,11 @@
 {
-  "name": "Моя визитка",
-  "short_name": "Визитка",
+  "name": "ГЊГ®Гї ГўГЁГ§ГЁГІГЄГ ",
+  "short_name": "Г‚ГЁГ§ГЁГІГЄГ ",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#D5DFE5",
   "theme_color": "#567568",
-  "description": "Персональная визитная карточка",
+  "description": "ГЏГҐГ°Г±Г®Г­Г Г«ГјГ­Г Гї ГўГЁГ§ГЁГІГ­Г Гї ГЄГ Г°ГІГ®Г·ГЄГ ",
   "icons": [
     {
       "src": "icons/192.png",

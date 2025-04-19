@@ -1,4 +1,4 @@
- // Регистрация Service Worker
+
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js')
@@ -11,18 +11,14 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// Обработка события beforeinstallprompt
+
 let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (e) => {
-    // Предотвращаем автоматическое отображение подсказки
     e.preventDefault();
-    // Сохраняем событие для последующего использования
     deferredPrompt = e;
-    // Можете показать кнопку установки здесь
     console.log('PWA can be installed');
 });
 
-// Функция для вызова установки
 function installPWA() {
     if (deferredPrompt) {
         deferredPrompt.prompt();
